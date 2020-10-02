@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming and making money</title>
+    <style>
+       *{
+           box-sizing: border-box;
+           font-family: sans-serif;
+       }
+
+       html,body{
+           margin: 0;
+           padding: 0.5em;
+       }
+       li{
+           text-align: center;
+           width: 13.9%;
+           display: inline-block;
+           
+       }
+       ul{
+          padding: 0;
+           border: 1px solid black;
+
+           
+       }
+      
+      p{
+        text-transform: uppercase;
+        background: black;
+        color: white;
+        padding: 0.6em;
+        display: inline-block;
+        font-family: sans-serif;
+        margin: 0;
+      }
+      .all-d{
+          display: grid;
+          grid-template-rows: 20% 80%;
+      }
+      input{
+          width: 80%;
+      }
+      .inpt{
+          padding: 0.5em;
+          padding: 1em;
+      }
+      .day {
+          padding: 1em 0;
+      }
+     
+    </style>
+</head>
+<body>
+    <h1>02 oct 2020</h1>
+    <div class="week1">
+      <p >Week one</p>
+      <ul>
+          <li><div class="all-d" id="all-d">
+             <div class="day"> DAY 1</div>
+          <div class="inpt" id="pInpt"><input type="text" id="inpt" > </div>
+            </div></li>
+          <li><div class="all-d" id="all-d">
+             <div class="day"> DAY 2</div>
+             <div class="inpt" id="pInpt"><input type="text" id="inpt"> </div>
+            </div></li>
+          <li><div class="all-d" id="all-d">
+             <div class="day"> DAY 3</div>
+             <div class="inpt" id="pInpt"><input type="text" id="inpt"> </div>
+            </div></li>
+          <li><div class="all-d" id="all-d">
+             <div class="day"> DAY 4</div>
+             <div class="inpt" id="pInpt"><input type="text" id="inpt"> </div>
+            </div></li>
+          <li><div class="all-d" id="all-d">
+             <div class="day"> DAY 5</div>
+             <div class="inpt" id="pInpt"><input type="text" id="inpt"> </div>
+            </div></li>
+          <li><div class="all-d" id="all-d">
+             <div class="day"> DAY 6</div>
+             <div class="inpt" id="pInpt"><input type="text" id="inpt"> </div>
+            </div></li>
+          <li><div class="all-d" id="all-d">
+             <div class="day"> DAY 7</div>
+             <div class="inpt" id="pInpt"><input type="text" id="inpt"> </div>
+            </div></li>
+      </ul>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+   
+           const timing = localStorage.getItem('time');
+           const container = document.getElementById('pInpt');
+           const para = document.createElement('p');
+           const timerr =  document.getElementById('inpt');
+           const butt = document.createElement("button");
+        
+           
+
+
+     window.onload = function(){
+         if(localStorage.getItem('time') === null){
+              console.log('nope')
+         }else{
+          timerr.remove();
+          
+           container.append(para);
+           para.append(timing);
+           
+              }
+     };
+
+
+
+
+     document.getElementById('inpt').addEventListener('keyup', function(event){
+           if(event.keyCode === 13 ){
+               
+               const timerrr =  document.getElementById('inpt').value;
+               timerr.value = ' ';
+               localStorage.setItem('time', timerrr);
+               timerr.remove();
+               
+               container.append(para);
+               para.append(timerrr);
+               
+           }
+     })
+
+     container.onclick = function(){
+      
+
+       localStorage.removeItem('time');
+       setInterval( function(){
+        
+        window.location.reload(false); 
+
+        
+       }
+
+       , 3000);
+     
+       getElementById
+      
+     }
+    
+
+
+
+    </script>
+</body>
+</html>

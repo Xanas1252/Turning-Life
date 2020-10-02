@@ -1,0 +1,35 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+html, body{
+    background: black;
+}
+
+button{
+   
+    cursor: pointer;
+    border: 1px solid white;
+    background: black;
+    color: white;
+    min-width: 11em;
+   
+}
+
+button:hover{
+    transition: 1s;
+    background: white;
+    border: black;
+    color: black;
+}
+.both-butt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+
+}
